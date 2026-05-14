@@ -57,6 +57,8 @@
                     icon="shopping-cart">Orders</x-admin-nav-link>
                 <x-admin-nav-link :href="route('admin.users.index')" :active="request()->routeIs('admin.users.*')"
                     icon="users">Users</x-admin-nav-link>
+                <x-admin-nav-link :href="route('home')" :active="request()->routeIs('home')"
+                    icon="users">View as User</x-admin-nav-link>
 
                 <div class="pt-4 mt-4 border-t border-gray-100">
                     <form method="POST" action="{{ route('logout') }}">

@@ -51,8 +51,13 @@
 
             <div class="flex items-center space-x-4 text-gray-700 ">
                 <a href="{{ route('home') }}" class="hover:text-green-600 transition-colors cursor-pointer">Home</a>
-                <a href="{{ route('shop') }}" class="hover:text-green-600 transition-colors cursor-pointer"> All
-                    Products</a>
+                <a href="{{ route('shop') }}" class="hover:text-green-600 transition-colors cursor-pointer"> All Products</a>
+                @if(Auth::user()->isAdmin())
+                    <a href="{{ route('admin.dashboard') }}"
+                        class="flex items-center px-4 py-2.5 text-sm text-green-900 font-bold hover:bg-green-50 transition-colors">
+                        <i data-lucide="layout-dashboard" class="w-4 h-4 mr-3"></i> Admin Panel
+                    </a>
+                @endif
             </div>
             <!-- Actions -->
             <div class="flex items-center space-x-6">
